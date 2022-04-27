@@ -40,6 +40,10 @@ namespace math {
             y /= a;
             return *this;
         }
+
+        bool operator == (vec2<T> const& rhs) const {
+            return x == rhs.x && y == rhs.y;
+        }
     };
 
     template <typename T> 
@@ -88,6 +92,12 @@ namespace math {
     inline
     T dot(vec2<T> const& lhs, vec2<T> const& rhs) {
         return lhs.x * rhs.x + lhs.y * rhs.y;
+    }
+    
+    template <typename T>
+    inline
+    T approx_eq(vec2<T> const& lhs, vec2<T> const& rhs, T eps = T(1e-5f)) {
+        return std::abs(lhs.x - rhs.x) < eps && std::abs(lhs.x - rhs.x) < eps;
     }
 
     using vec2f = vec2<float>;

@@ -48,6 +48,13 @@ namespace math {
             return *this;
         }
 
+        bool operator == (mat2<T> const& rhs) const {
+            return m[0][0] == rhs.m[0][0] && 
+                   m[0][1] == rhs.m[0][1] && 
+                   m[1][0] == rhs.m[1][0] && 
+                   m[1][1] == rhs.m[1][1];
+        }
+
         static mat2<T> eye() {
             return mat2<T>{T(1), T(0), T(0), T(1)};
         }
