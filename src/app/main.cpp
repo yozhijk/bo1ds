@@ -4,6 +4,7 @@
 
 #include "vec2.h"
 #include "mat2.h"
+#include "ray2.h"
 
 using namespace std;
 using namespace math;
@@ -26,6 +27,11 @@ int main() {
     auto mr = mat2f::rotation(3.14f / 2.f);
     auto vr = mr * v;
     cout << vr << endl;
+
+
+    auto r = ray2f{{0.f, 0.f}, {1.f, 1.f}, 0.1f, 1000.f};
+    cout << r << endl;
+
 
     return 0;
 }

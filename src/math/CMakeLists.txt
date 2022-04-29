@@ -1,6 +1,10 @@
 add_library(math INTERFACE)
 
-target_sources(math INTERFACE vec2.h)
+target_sources(math INTERFACE
+    vec2.h
+    mat2.h
+    ray2.h
+)
 
 target_include_directories(math INTERFACE
     ${CMAKE_CURRENT_SOURCE_DIR}
